@@ -19,7 +19,7 @@ There are four sections. Properties include the DoomED \cw{id}, \cw{speed}, \cw{
 
 Property lists and sound names are self-explanatory, and there is no need to spend too much time on them. What is more difficult to understand is how the state machine is defined.\\
 \par
-A thing's state machine is partly statically defined inside the engine (when a monster is attacked it goes directly to \cw{seestate}; when it receives lethal damage, it goes direcly to \cw{diestate}) and partly defined in \cw{multigen.txt}. Each line in the state definition follows a syntax:
+A thing's state machine is partly statically defined inside the engine (when a monster is attacked it goes directly to \cw{seestate}; when it receives lethal damage, it goes directly to \cw{diestate}) and partly defined in \cw{multigen.txt}. Each line in the state definition follows a syntax:
 \begin{enumerate}
 \item State name.
 \item Frame family.
@@ -90,7 +90,7 @@ The Cyberdemon however is an extreme case since it is not symmetrical. For the i
 \cscaledimage{0.9}{imp_sprite}{}
 \end{figure}
 \par
-\trivia{When an entity receives more than  \cw{spawnhealth} damage (negative its spawing state; in the case of an imp that would be -60), the engine triggers not \cw{deathstate} but the \cw{xdeathstate} state that means the entity exploded.}\\
+\trivia{When an entity receives more than  \cw{spawnhealth} damage (negative its spawning state; in the case of an imp that would be -60), the engine triggers not \cw{deathstate} but the \cw{xdeathstate} state that means the entity exploded.}\\
 \par 
 \ccode{explode.c}
 

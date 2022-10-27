@@ -27,11 +27,11 @@ Worldwide, the platform had a lukewarm reception. And then the beast was unleash
 % Ironically Sega's next console, the DreamCast addressed all issues.  It was easy to program, ran on Windows and was very well liked by developers.
 As a symbol of the failure, Sonic X-treme, which would have been the first fully 3D Sonic the Hedgehog game and an original Sonic game for the Saturn was canceled after three years in an apocalyptic development which almost took the life of its producer Mike Wallis.\\
 \par
-In 1998 Sega released the Dreamcast. Well-received by developers (except for Electronic Arts who snubbed it completely), the system suffered from an early copy-protection hack and competition from the XBox and the PS2. In late 2001, on the verge of bankruptcy, Sega withdrew from the hardware business to focus on its "Virtua" line of products.
+In 1998 Sega released the Dreamcast. Well-received by developers (except for Electronic Arts who snubbed it completely), the system suffered from an early copy-protection hack and competition from the Xbox and the PS2. In late 2001, on the verge of bankruptcy, Sega withdrew from the hardware business to focus on its "Virtua" line of products.
 
 
 \subsection{Programming the Saturn}
-Programming the Saturn was a difficult task. The programmer's manual is broken down into eight voluminous manuals requiring repeat reading sessions to build a mental image of the flow of data. The diagram in figure \ref{arch_saturn} gives some idea of the daunting effort required to coordinates eight chips.\\
+Programming the Saturn was a difficult task. The programmer's manual is broken down into eight voluminous manuals requiring repeat reading sessions to build a mental image of the flow of data. The diagram in figure \ref{arch_saturn} gives some idea of the daunting effort required to coordinate eight chips.\\
 \par
 Main programming was done via the two SH-2 processors connected to 2.0MiB of shared RAM. One SH-2 was deemed the master and the other the slave. In the common configuration, the slave was intended to be used as a helper for parallelizable tasks. Communication between chips (to indicate what to execute) had to be done via a tedious interrupt system. To deal with static and global variables the programmer had to deal with mutexes and semaphores which were uncommon concepts for game console programmers. Because they were on the same bus, one had to wait for the other if both needed to access either to RAM or a peripheral on the system. Attempts to minimize the issue were made via a shared unified 4KiB cache that had little impact on the bottleneck.\\
 \par
@@ -114,7 +114,7 @@ Despite its issues and ill-timed release, it is a bitter feeling to see what hap
 
 
 
-\subsection{Doom on Saturn}
+\subsection{\doom{} on Saturn}
 % The port to the Saturn was done by Rage Software on a very tight schedule. Like most ports, it is based on the Jaguar assets. The console had the same technical shortcomings when it comes to texture sampling, as Jim Bagley remembers\footnote{RetroGamer \#134.}:\\
 
 The port to the Saturn was done by Rage Software on a very tight schedule. The graphic part of the engine was done via the VDP1 writing quads into three separate layers (a floors, ceiling, and walls layer, a things layer, and a status bar layer) which were combined by the VDP2 and sent to the TV. The resulting framerate was outstanding compared to other ports but the lack of perspective correct texturing ended up disturbing Jim Bagley's plans\footnote{RetroGamer \#134.}:\\
