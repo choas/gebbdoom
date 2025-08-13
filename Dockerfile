@@ -1,12 +1,11 @@
-# docker build -t choas/gebb .
-# docker run --volume $PWD:/build choas/gebb
+# podman build -t choas/gebbdoom .
+# podman run --volume $PWD:/build choas/gebbdoom
 
-FROM ubuntu:22.10
+FROM golang:1.22
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
-    inkscape texlive texlive-font-utils texlive-latex-extra golang \
-    && rm -rf /var/lib/apt/lists/*
+    inkscape texlive texlive-font-utils texlive-fonts-recommended texlive-latex-extra golang-go && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /build
 VOLUME [ "/build" ]
